@@ -1,0 +1,17 @@
+<app-sidebar></app-sidebar>
+
+<h1 class="headline"></h1>
+<div class="charts">
+<div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="row w-100 d-flex align-items-center justify-content-center">
+            <p-chart class="p-5" type="bar" [data]="eventData" [options]="basicOptions"></p-chart>
+            <p-chart class="p-5" type="bar" [data]="modalidyData" [options]="basicOptions"></p-chart>
+            <p-chart class="p-5" type="pie" [data]="planData" [options]="basicOptions"></p-chart>
+            <p-chart class="p-5" type="doughnut" [data]="countryData" [options]="basicOptions"></p-chart>
+            <p-chart class="p-5" type="doughnut" [data]="frequencyData" [options]="basicOptions"></p-chart>
+            <p-chart class="p-5" type="doughnut" [data]="companyData" [options]="basicOptions"></p-chart>
+            <p-chart class="p-5" type="doughnut" [data]="profileData" [options]="basicOptions"></p-chart>
+    </div>    
+</div>
+</div>
+<div class="spacer"></div>

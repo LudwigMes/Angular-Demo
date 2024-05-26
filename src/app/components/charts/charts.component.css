@@ -1,0 +1,27 @@
+
+p-chart{
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem;
+    margin-top: 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.spacer{
+    height:100px;
+}
+
+
+.headline{
+    height:50px;
+}
+
+
+@media(max-width: 700px){
+    .charts{
+        margin-left: 200px;
+    }
+  }
+  

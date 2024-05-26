@@ -1,0 +1,42 @@
+<app-sidebar></app-sidebar>
+
+<div class="table">
+<div class="m-5 border rounded shadow-lg" >
+        <p-table
+    #dt1
+    [value]="data"
+    [columns]="cols"
+    dataKey="id"
+    [rows]="10"
+    currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+    [globalFilterFields]="['Date','Event','Modality','Country']"
+    >
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th style="min-width:15rem" *ngFor="let col of cols">
+                {{ col | titlecase }}
+                <div *ngIf="col === 'Date' || col === 'Event' || col === 'Modality' || col==='Country' || col==='Plan'">
+                    <p-columnFilter type="text" [field]="col"></p-columnFilter>
+                 
+                </div>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-element let-rowData let-columns="cols">
+        <tr>
+            <td *ngFor="let col of cols">
+                {{ rowData[col] }}
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="7">No results found.</td>
+        </tr>
+    </ng-template>
+    </p-table>
+
+</div>
+</div>
+
+<div class="spacer"></div>
